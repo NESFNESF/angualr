@@ -1,47 +1,51 @@
-<div >
-  
-   <table  class="display  table table-striped table-bordered" cellspacing="0" width="100%">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>N°</th>
-                                                            <th>Nom</th>
-                                                            <th>Description</th>
-                                                            <th>imageUrl</th>
-                                                            <th>Action</th>
-                                                        </tr>
-                                                    </thead>
-                                              
-                                                    
-                                                      <tbody>
-                                                        <tr>
-                                                          <td>1</td>
-                                                          <td>name1</td>
-                                                          <td>desc1</td>
-                                                          <td>im1</td>
-                                                          <td> <button class="btn btn-outline-info">Update</button>
-                                                              <button class=" ml-2 mr-2 btn btn-outline-danger">Delete</button></td>
-                                                </tr>
-                                                <tr>
-                                                          <td>2</td>
-                                                          <td>name2</td>
-                                                          <td>desc2</td>
-                                                          <td>im2</td>
-                                                          <td> <button class="btn btn-outline-info">Update</button>
-                                                              <button class=" ml-2 mr-2 btn btn-outline-danger">Delete</button></td>
-                                                </tr>
-                                                <tr>
-                                                          <td>3</td>
-                                                          <td>name3</td>
-                                                          <td>desc3</td>
-                                                          <td>im3</td>
-                                                          <td> <button class="btn btn-outline-info">Update</button>
-                                                              <button class=" ml-2 mr-2 btn btn-outline-danger">Delete</button></td>
-                                                </tr>
-                                                      </tbody>
-                                                    </table>
+<div>
+  <div class="bg-info text-white mb-2 p-2">Model Data: {{jsonProduct}}</div>
+  <div class="bg-warning text-white mb-2 p-2">Model Data: {{categorys}}</div>
+  <table class="display  table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>imageUrl</th>
+        <th>Action</th>
+      </tr>
+    </thead>
 
-                                          <div class="row">
-                                            <button class="btn mt-4 btn-success">New Cateory</button>
-                                          </div>
+
+    <tbody>
+      <tr *ngFor="let item of categorys">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.imageUrl}}</td>
+        <td> <button class="btn btn-outline-info">Update</button>
+          <button class=" ml-2 mr-2 btn btn-outline-danger">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>name2</td>
+        <td>desc2</td>
+        <td>im2</td>
+        <td> <button class="btn btn-outline-info">Update</button>
+          <button class=" ml-2 mr-2 btn btn-outline-danger">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>name3</td>
+        <td>desc3</td>
+        <td>im3</td>
+        <td> <button class="btn btn-outline-info">Update</button>
+          <button class=" ml-2 mr-2 btn btn-outline-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <button class="btn mt-4 btn-success">New Cateory</button>
+  </div>
 
 </div>

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from "@angular/common/http";
+import { CategoryModel } from "../model/category/category.model";
 
 import { CategoryComponent } from './category.component';
 import { categoryRouting } from './category.routing';
@@ -7,7 +9,8 @@ import { categoryRouting } from './category.routing';
 @NgModule({
   imports: [
     CommonModule,
-    categoryRouting
+    categoryRouting,
+    HttpClientModule
   ],
   exports: [
     CategoryComponent
@@ -15,7 +18,7 @@ import { categoryRouting } from './category.routing';
   declarations: [
     CategoryComponent
   ],
-  providers: [
+  providers: [ CategoryModel
   ],
 })
 export class categoryModule { }

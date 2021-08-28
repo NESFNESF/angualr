@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
-
+import { HttpClientModule } from "@angular/common/http";
 import { routing } from "./app.routing";
 
 @NgModule({
@@ -13,7 +13,8 @@ import { routing } from "./app.routing";
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpClientModule
 
   ],
   providers: [ ],  
